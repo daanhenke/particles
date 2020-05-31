@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Particle Engine</title>
+    <style>
+        html, body, div.particle-container {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="particle-container"></div>
+    <script>
+        window.addEventListener('load', () => {
+            let container = document.querySelector('div.particle-container');
+            if (container === null) return;
+
+            let simulation = new parten.Simulation();
+            container.appendChild(simulation.getCanvas());
+            container.appendChild(simulation.getStats());
+            simulation.start();
+
+            window.addEventListener('resize', () => {
+                simulation.setSizeAuto();
+            })
+        });
+    </script>
+</body>
+</html>
