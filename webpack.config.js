@@ -11,7 +11,7 @@ module.exports = {
     },
     output: {
         filename: 'js/[name].parten.js',
-        path: path.join(__dirname),
+        path: path.join(__dirname, DIST_DIR),
         library: 'parten',
         libraryTarget: 'umd'
     },

@@ -12,6 +12,6 @@ export default class ParticleFamily {
     randomizeAttraction()
     {
         this.attraction = [];
-        this.sim.families.forEach(family => this.attraction.push(this.sim.chance.floating({min: -.01, max: .01})));
+        this.sim.families.forEach(family => this.attraction.push(this.sim.chance.floating({min: -.05, max: .05})));
     }
 }
